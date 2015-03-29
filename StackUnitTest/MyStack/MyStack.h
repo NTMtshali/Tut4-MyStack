@@ -5,14 +5,17 @@ class MyStack
 {
 private:
 	int number;
-	MyStack *linkptre;
+	int depth;
+	MyStack *linkptre = 0;
 
 public:
-	MyStack(int);
-	void pop(MyStack *);
+	MyStack(int, int);
+	int pop(MyStack *);
 	void push(MyStack *, int);
 	int peek();
-	bool isEmpty();
-	bool isFull();
+	bool isEmpty(MyStack *);
+	bool isFull(MyStack *);
+	void setnumber(int);
+	bool check(MyStack *);
 };
 #endif
